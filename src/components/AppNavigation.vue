@@ -66,7 +66,7 @@ export default {
                 {
                     icon: 'bubble_chart',
                     title: 'Menu 2',
-                    // to: '/qqq'
+                    to: '/sucesso'
                 },
                 {
                     icon: 'bubble_chart',

@@ -30,6 +30,11 @@ const router = new Router({
             meta: {
                 authRequired: true
             }
+        },
+        {
+            path: '/sucesso',
+            name: 'Sucesso',
+            component: () => import('./views/Sucesso.vue'),
         }
 
     ]
