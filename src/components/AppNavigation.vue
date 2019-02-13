@@ -50,6 +50,7 @@
 </template>
 
 <script>
+
 export default {
     data () {
         return {
@@ -60,12 +61,12 @@ export default {
             items: [
                 {
                     icon: 'bubble_chart',
-                    title: 'Menu 1',
+                    title: 'Bitcoin',
                     to: '/bitcoin'
                 },
                 {
                     icon: 'bubble_chart',
-                    title: 'Menu 2',
+                    title: 'Sucesso',
                     to: '/sucesso'
                 },
                 {

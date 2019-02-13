@@ -1,5 +1,5 @@
 <template>
-     <v-container fluid grid-list-xl>
+     <v-container id="repor" fluid grid-list-xl>
 
       <v-layout column>
         <v-flex>
@@ -12,7 +12,7 @@
                                 hide-actions
                                 class="elevation-1">
 
-                    <template slot="items" scope="props">
+                    <template slot="items" slot-scope="props">
                       <tr>
                         <td>  
                           <v-list-tile-avatar> 
@@ -36,6 +36,8 @@
 
 <script>
 export default {
+  name: 'Repositorios',
+  el: 'repor',
   data () {
     return {
       mainHeaders: [
@@ -58,7 +60,5 @@ export default {
       ]
     }
   },
-  methods: {
-  },
-}
+};
 </script>

@@ -1,16 +1,18 @@
 <template>
-    <v-container v-if="isAuthenticated" id="bitcoin" fluid fill-height  class="teal darken-3 darken-2 home-hero" style="max-height: 100vh;">
+    <v-container id="bitcoin" fluid fill-height  class="teal darken-1 darken-2 home-hero" style="max-height: 100vh;">
         <v-layout justify-center align-center column pa-5>
             <div class="display-4 font-weight-black white--text text-xs-center">BITCOIN</div>
-                <p> {{ info }} </p>
+            
+            <div v-for="(currency, i) in info" v-bind:key=i class="display-1 font-weight-bold white--text text-xs-center">
+                
+                {{ currency.description }} : <span v-html="currency.symbol"></span> {{ currency.rate_float | currencydecimal }}
+
+            </div>
         </v-layout>
     </v-container>
-    <home-public v-else/>
 </template>
 
-
 <script>
-import HomePublic from '@/components/HomePublic';
 
 export default {
     name: 'Bitcoin',
@@ -26,7 +28,12 @@ export default {
         }
     },
     mounted(){
-        this.$store.getters.getBitcoinInfo.then(response => (this.info = response))
+        this.$store.getters.getBitcoinInfo.then(response => (this.info = response.data.bpi))
+    },
+    filters: {
+        currencydecimal (value) {
+        return value.toFixed(2)
     }
+}
 };
 </script>

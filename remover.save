@@ -1,0 +1,38 @@
+	deleted:   sample/.gitignore
+	deleted:    sample/README.md
+	deleted:    sample/babel.config.js
+	deleted:    sample/package-lock.json
+	deleted:    sample/package.json
+	deleted:    sample/public/favicon.ico
+	deleted:    sample/public/img/icons/android-chrome-192x192.png
+	deleted:    sample/public/img/icons/android-chrome-512x512.png
+	deleted:    sample/public/img/icons/apple-touch-icon-120x120.png
+	deleted:    sample/public/img/icons/apple-touch-icon-152x152.png
+	deleted:    sample/public/img/icons/apple-touch-icon-180x180.png
+	deleted:    sample/public/img/icons/apple-touch-icon-60x60.png
+	deleted:    sample/public/img/icons/apple-touch-icon-76x76.png
+	deleted:    sample/public/img/icons/apple-touch-icon.png
+	deleted:    sample/public/img/icons/favicon-16x16.png
+	deleted:    sample/public/img/icons/favicon-32x32.png
+	deleted:    sample/public/img/icons/msapplication-icon-144x144.png
+	deleted:    sample/public/img/icons/mstile-150x150.png
+	deleted:    sample/public/img/icons/safari-pinned-tab.svg
+	deleted:    sample/public/index.html
+	deleted:    sample/public/manifest.json
+	deleted:    sample/public/robots.txt
+	deleted:    sample/src/App.vue
+	deleted:    sample/src/assets/logo.png
+	deleted:    sample/src/components/HelloWorld.vue
+	deleted:    sample/src/main.js
+	deleted:    sample/src/registerServiceWorker.js
+	deleted:    sample/src/router.js
+	deleted:    sample/src/store.js
+	deleted:    sample/src/views/About.vue
+	deleted:    sample/src/views/Home.vue
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	remover
+
+no changes added to commit (use "git add" and/or "git commit -a")

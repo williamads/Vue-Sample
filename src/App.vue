@@ -10,7 +10,7 @@
 
 <script>
 import AppNavigation from '@/components/AppNavigation';
-import AppFooter from '@/components/AppFooter';
+// import AppFooter from '@/components/AppFooter';
 export default {
   name: 'App',
   components: {
