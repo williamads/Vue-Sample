@@ -61,7 +61,7 @@ export default {
                 {
                     icon: 'bubble_chart',
                     title: 'Menu 1',
-                    to: '/novo'
+                    to: '/bitcoin'
                 },
                 {
                     icon: 'bubble_chart',

@@ -1,12 +1,17 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import axios from 'axios';
+import axios from 'axios';
 import router from '@/router';
 
 import VuexPersistence from 'vuex-persist'
 
-
 Vue.use(Vuex);
+
+const bitcoinApi = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+
+const bitcoinClient = axios.create({
+    baseURL: bitcoinApi
+})
 
 export default new Vuex.Store({
     state: {
@@ -34,6 +39,9 @@ export default new Vuex.Store({
     getters: {
         isAuthenticated(state) {
             return state.isAuthenticated;
+        },
+        getBitcoinInfo(){
+            return bitcoinClient.get();
         }
     }
 });

@@ -13,7 +13,7 @@
           white--text
           xs12
         >
-          &copy;2018 — <strong>Vuejs</strong>
+          &copy;2019 — <strong>Vuejs</strong>
         </v-flex>
       </v-layout>
     </v-footer>
