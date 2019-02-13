@@ -8,10 +8,15 @@ import VuexPersistence from 'vuex-persist'
 Vue.use(Vuex);
 
 const bitcoinApi = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+//const githubApi = 'https://api.github.com/users/williamads/repos';
 
 const bitcoinClient = axios.create({
     baseURL: bitcoinApi
 })
+
+//const githubClient = axios.create({
+//    baseURL: githubApi
+//})
 
 export default new Vuex.Store({
     state: {
@@ -21,6 +26,9 @@ export default new Vuex.Store({
     mutations: {
         setIsAuthenticated(state, payload) {
             state.isAuthenticated = payload;
+        },
+        setRepositories(state, payload){
+            state.repositories = payload;
         }
     },
     actions: {
@@ -34,6 +42,16 @@ export default new Vuex.Store({
         userSignOut({ commit }) {
             commit('setIsAuthenticated', false);
             router.push('/');
+        },
+        getRespositories({ commit }){
+            const baseURI = 'https://api.github.com/users/williamads/repos'
+            axios.get(baseURI)
+                .then(response => {
+                    commit('setRepositories', response.data)
+                })
+                .catch(() => {
+                    commit('setRepositories', []);
+                })
         }
     },
     getters: {
@@ -42,6 +60,9 @@ export default new Vuex.Store({
         },
         getBitcoinInfo(){
             return bitcoinClient.get();
-        }
+        },
+        //getRepos(){
+        //    return githubClient.get();
+        //}
     }
 });

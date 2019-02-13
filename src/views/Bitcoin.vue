@@ -1,7 +1,7 @@
 <template>
     <v-container id="bitcoin" fluid fill-height  class="teal darken-1 darken-2 home-hero" style="max-height: 100vh;">
         <v-layout justify-center align-center column pa-5>
-            <div class="display-4 font-weight-black white--text text-xs-center">BITCOIN</div>
+            <div class="display-4 font-weight-black white--text text-xs-center">BITCOIN NOW</div>
             
             <div v-for="(currency, i) in info" v-bind:key=i class="display-1 font-weight-bold white--text text-xs-center">
                 
@@ -16,7 +16,7 @@
 
 export default {
     name: 'Bitcoin',
-    el: '#bitcoin',
+    // el: '#bitcoin', // tava dando erro com isso aqui
     data (){
         return{
             info: null
