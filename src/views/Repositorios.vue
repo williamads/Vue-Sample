@@ -5,7 +5,7 @@
         <v-flex>
             <v-layout>
                 <v-flex d-flex xs12 sm12 md12>
-              
+
                   <v-data-table :headers="mainHeaders"
                                 :items="respositories"
                                 item-key="name"
@@ -14,9 +14,9 @@
 
                     <template slot="items" slot-scope="props">
                       <tr>
-                        <td>  
-                          <v-list-tile-avatar> 
-                            <img :src="props.item.owner.avatar_url"> 
+                        <td>
+                          <v-list-tile-avatar>
+                            <img :src="props.item.owner.avatar_url">
                           </v-list-tile-avatar>
                         </td>
                         <td class="text-xs">{{ props.item.full_name }}</td>
@@ -24,7 +24,7 @@
                         <td class="text-xs">{{ props.item.forks_count }}</td>
                       </tr>
                     </template>
-               
+
                   </v-data-table>
                 </v-flex>
             </v-layout>
